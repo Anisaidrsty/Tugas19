@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login" tests="2" skipped="0" failures="1" errors="0" timestamp="2025-04-15T08:27:06" hostname="LAPTOP-JEC6DRN0" time="1.312">
+  <properties/>
+  <testcase name="Login with valid data" classname="Login" time="1.214"/>
+  <testcase name="Login with invalid data" classname="Login" time="0.096">
+    <failure message="io.cucumber.junit.UndefinedStepException: The step 'user is on the login page' and 1 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@Given(&quot;user is on the login page&quot;)&#10;public void user_is_on_the_login_page() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;user stays on login page&quot;)&#10;public void user_stays_on_login_page() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: The step 'user is on the login page' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;user is on the login page&quot;)
+public void user_is_on_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;user stays on login page&quot;)
+public void user_stays_on_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@login @valid-login
+Scenario: Login with valid data               ?[90m# src/test/resources/features/login.feature:5?[0m
+  ?[32mGiven ?[0m?[32muser on the home page?[0m                 ?[90m# stepDevinitions.LoginStepDef.onTheLoginPage()?[0m
+  ?[32mWhen ?[0m?[32muser input ?[0m?[32m?[1m"standard_user"?[0m?[32m as username?[0m ?[90m# stepDevinitions.LoginStepDef.inputUsername(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32muser input ?[0m?[32m?[1m"secret_sauce"?[0m?[32m as password?[0m   ?[90m# stepDevinitions.LoginStepDef.inputPassword(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32muser will redirect to home page?[0m        ?[90m# stepDevinitions.LoginStepDef.verifyTheHomePage()?[0m
+
+@login @invalid-login
+Scenario: Login with invalid data             ?[90m# src/test/resources/features/login.feature:12?[0m
+  ?[33mGiven ?[0m?[33muser is on the login page?[0m
+  ?[36mWhen ?[0m?[36muser input ?[0m?[36m?[1m"standard_user"?[0m?[36m as username?[0m ?[90m# stepDevinitions.LoginStepDef.inputUsername(java.lang.String)?[0m
+  ?[36mAnd ?[0m?[36muser input ?[0m?[36m?[1m"wrong_password"?[0m?[36m as password?[0m ?[90m# stepDevinitions.LoginStepDef.inputPassword(java.lang.String)?[0m
+  ?[36mThen ?[0m?[36muser stays on login page?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

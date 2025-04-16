@@ -10,7 +10,7 @@
 
     @invalid-login
     Scenario: Login with invalid data
-      Given user is on the login page
+      Given user on the home page
       When user input "standard_user" as username
       And user input "wrong_password" as password
       Then user stays on login page

@@ -12,6 +12,7 @@ import pages.LoginPage;
 
 public class LoginStepDef {
 
+    @Then("user stays on login page")
     @Given("user on the home page")
     public void onTheLoginPage(){
         LoginPage loginPage = new LoginPage();
@@ -36,12 +37,5 @@ public class LoginStepDef {
     public void verifyTheHomePage(){
         HomePage homePage = new HomePage();
         Assert.assertTrue(homePage.verifyPageIsDisplayed());
-    }
-
-    @Given("user is on the login page")
-    public void onTheLoginPage(){
-        LoginPage loginPage = new LoginPage();
-        Assert.assertTrue(loginPage.isPageDisplayed());
-
     }
 }
